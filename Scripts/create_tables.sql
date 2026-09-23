@@ -75,6 +75,7 @@ CREATE TABLE venda (
     id_cliente INTEGER NOT NULL,
     id_funcionario INTEGER NOT NULL,
     id_produto INTEGER NOT NULL,
+	id_loja INTEGER NOT NULL,
 
     FOREIGN KEY (id_cliente)
         REFERENCES cliente(id_cliente),
@@ -83,7 +84,10 @@ CREATE TABLE venda (
         REFERENCES funcionario(id_funcionario),
 
     FOREIGN KEY (id_produto)
-        REFERENCES produto(id_produto)
+        REFERENCES produto(id_produto),
+		
+	FOREIGN KEY (id_loja)
+        REFERENCES loja (id_loja),
 );
 
 -- TABELA: PAGAMENTO
@@ -97,4 +101,17 @@ CREATE TABLE pagamento (
 
     FOREIGN KEY (id_venda)
         REFERENCES venda(id_venda)
+);
+
+CREATE TABLE produto_fornecedor (
+    id_produto INTEGER NOT NULL,
+    id_fornecedor INTEGER NOT NULL,
+
+    PRIMARY KEY (id_produto, id_fornecedor),
+
+    FOREIGN KEY (id_produto)
+        REFERENCES produto(id_produto),
+
+    FOREIGN KEY (id_fornecedor)
+        REFERENCES fornecedor(id_fornecedor)
 );
