@@ -9,7 +9,7 @@ VALUES ('Esporte Mais', 'Icapuí', 'Rua Principal');
 
 -- FUNCIONÁRIOS
 
-INSERT INTO funcionario (nome, cpf, cargo, id_loja)
+INSERT INTO funcionario (nome, cpf, cargo, id_loja,)
 VALUES ('Carlos Silva', '11111111111', 'Vendedor', 1);
 
 INSERT INTO funcionario (nome, cpf, cargo, id_loja)
@@ -92,24 +92,24 @@ VALUES ('Beatriz Costa', '77777777777', '88999990007');
 -- VENDAS
 
 INSERT INTO venda
-(data, valor_total, id_cliente, id_funcionario, id_produto)
+(data, valor_total, id_cliente, id_funcionario, id_produto, id_venda)
 VALUES
-('2026-09-18', 299.90, 1, 1, 1);
+('2026-09-18', 299.90, 1, 1, 1, 1);
 
 INSERT INTO venda
-(data, valor_total, id_cliente, id_funcionario, id_produto)
+(data, valor_total, id_cliente, id_funcionario, id_produto, id_venda)
 VALUES
-('2026-09-18', 179.90, 2, 1, 2);
+('2026-09-18', 179.90, 2, 1, 2, 2);
 
 INSERT INTO venda
-(data, valor_total, id_cliente, id_funcionario, id_produto)
+(data, valor_total, id_cliente, id_funcionario, id_produto, id_venda)
 VALUES
-('2026-09-19', 129.90, 3, 2, 3);
+('2026-09-19', 129.90, 3, 2, 3, 2);
 
 INSERT INTO venda
-(data, valor_total, id_cliente, id_funcionario, id_produto)
+(data, valor_total, id_cliente, id_funcionario, id_produto, id_venda)
 VALUES
-('2026-09-19', 399.90, 4, 3, 4);
+('2026-09-19', 399.90, 4, 3, 4, 1);
 
 -- PAGAMENTOS
 
